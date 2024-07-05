@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://git.coopersystem.com.br/angelo.silva/cooper-wordpress-plugin-boilerplate"
+    "url": "#"
   },
   "keywords": [
     "Plugin",
@@ -35,5 +35,9 @@
     "gulp-uglify": "^3.0.2",
     "gulp-watch": "^5.0.1",
     "node-sass": "^6.0.1"
+  },
+  "dependencies": {
+    "gulp-dart-sass": "^1.1.0",
+    "sass": "^1.77.6"
   }
 }

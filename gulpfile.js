@@ -4,7 +4,7 @@ const gulp = require('gulp');
 const gulpLoadPlugins = require('gulp-load-plugins');
 const plugins = gulpLoadPlugins();
 const config = require('./config.json');
-const sass = require('gulp-sass')(require('node-sass'));
+const sass = require('gulp-dart-sass');
 
 // Sass Task
 require(`${config.tasksPath}/sass-compile`)(gulp, plugins, config, sass);
