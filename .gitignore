@@ -1,0 +1,52 @@
+# Node modules
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Diretórios de build
+dist/
+build/
+temp/
+
+# Webpack cache
+.cache/
+
+# Diretórios gerados pelo Webpack
+# assets/admin/js/
+# assets/admin/css/
+# assets/public/js/
+# assets/public/css/
+
+# SCSS Cache
+.sass-cache/
+
+# Sistema de arquivos MacOS
+.DS_Store
+
+# IDEs e editores
+.vscode/
+.idea/
+*.swp
+
+# Arquivos de ambiente local
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Cache e arquivos temporários de testes
+coverage/
+*.pid
+*.seed
+*.pid.lock
+
+# Arquivos de configuração gerados
+npm-debug.log
+yarn.lock
+package-lock.json
