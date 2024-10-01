@@ -1,43 +1,29 @@
 {
-  "name": "wp-plugin-boilerplate",
+  "name": "config-gulp",
   "version": "1.0.0",
-  "description": "Boilerplate para criação de plugins WordPress",
+  "description": "- npm i -",
   "main": "index.js",
   "scripts": {
-    "watch": "gulp watch",
-    "build": "gulp",
-    "test": "./vendor/bin/pest",
-    "phpcs": "phpcs -a -p --ignore=vendor,node_modules,tests --standard=WordPress-VIP-GO ."
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode production",
+    "watch": "webpack --mode development --watch"
   },
-  "repository": {
-    "type": "git",
-    "url": "#"
-  },
-  "keywords": [
-    "Plugin",
-    "WordPress",
-    "plugin",
-    "Boilerplate",
-    "kick",
-    "starter",
-    "bootstrap"
-  ],
-  "author": "Coopersystem",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
-    "gulp": "^4.0.2",
-    "gulp-clean-css": "^4.3.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-imagemin": "^7.0.1",
-    "gulp-load-plugins": "^2.0.7",
-    "gulp-plumber": "^1.2.1",
-    "gulp-sass": "^5.0.0",
-    "gulp-sourcemaps": "^3.0.0",
-    "gulp-uglify": "^3.0.2",
-    "gulp-watch": "^5.0.1",
-    "node-sass": "^6.0.1"
-  },
-  "dependencies": {
-    "gulp-dart-sass": "^1.1.0",
-    "sass": "^1.77.6"
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.4",
+    "babel-loader": "^9.2.1",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^7.1.2",
+    "css-minimizer-webpack-plugin": "^7.0.0",
+    "mini-css-extract-plugin": "^2.9.1",
+    "sass": "^1.79.3",
+    "sass-loader": "^16.0.2",
+    "style-loader": "^4.0.0",
+    "terser-webpack-plugin": "^5.3.10",
+    "webpack": "^5.95.0",
+    "webpack-cli": "^5.1.4"
   }
 }
