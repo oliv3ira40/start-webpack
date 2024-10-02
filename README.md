@@ -7,26 +7,78 @@ Este projeto tem como objetivo minificar e concatenar arquivos JavaScript e SCSS
 
 O projeto automatiza a compilação e minificação de arquivos front-end, utilizando Webpack para processar arquivos JavaScript e SCSS. Ele é flexível, permitindo que você escolha se deseja ou não minificar os arquivos durante o desenvolvimento (`watch`) ou apenas em produção (`build`).
 
-## Instalação
+## Instalação e como utilizar
+
+### Antes de começar:
+
+Este projeto foi criado para ser integrado em qualquer projeto front-end, automatizando a compilação e minificação de arquivos JavaScript e SCSS. Siga os passos abaixo para integrá-lo ao seu projeto com facilidade.
 
 ### Requisitos
 
 - Node.js (v12 ou superior)
 - NPM (ou Yarn)
 
-## Instalação e como utilizar
+---
 
-1. **Instale as dependências:**
+1. **Baixe o projeto:**
+    - Clone ou baixe o repositório deste projeto Webpack para o seu ambiente de desenvolvimento, **em uma pasta separada do seu projeto atual**. Isso evita que arquivos sejam substituídos no seu projeto durante a integração.
+
+2. **Exclua os arquivos `.gitignore` e `README.md`:**
+    - **Motivo:** Para evitar conflitos com o repositório do seu próprio projeto, exclua os arquivos `.gitignore` e `README.md` deste projeto Webpack, ou adapte-os conforme necessário.
+    - **Ação:** Delete ou modifique esses arquivos como preferir.
+
+3. **Se você já possui um `package.json` no seu projeto atual:**
+    - **Passo 1:** Abra o arquivo `package.json` do projeto Webpack que você baixou.
+    - **Passo 2:** Copie as seções `devDependencies` e `scripts` deste arquivo para o `package.json` do seu projeto existente. **Atenção para não sobrescrever outras partes do seu `package.json`!**
+    
+    - **Motivo:** As dependências e scripts adicionados permitem que seu projeto use as funcionalidades do Webpack para compilar e minificar os arquivos JavaScript e SCSS.
+    
+    **Exemplo de fusão das seções `scripts` e `devDependencies`:**
+    ```json
+    {
+      "name": "seu-projeto",
+      "version": "1.0.0",
+      "scripts": {
+        "build": "webpack --mode production",
+        "watch": "webpack --mode development --watch"
+      },
+      "devDependencies": {
+        "webpack": "^5.0.0",
+        "webpack-cli": "^4.0.0",
+        "sass-loader": "^12.0.0",
+        "css-loader": "^6.0.0",
+        "mini-css-extract-plugin": "^2.0.0",
+        "terser-webpack-plugin": "^5.0.0",
+        "css-minimizer-webpack-plugin": "^3.0.0"
+      }
+    }
+    ```
+
+4. **Se o seu projeto atual não tiver um `package.json`:**
+    - **Ação:** Simplesmente utilize o `package.json` deste projeto Webpack. **Copie-o para a raiz do seu projeto**.
+
+5. **Copie os arquivos restantes do projeto Webpack para o seu projeto:**
+    - **Motivo:** O projeto Webpack inclui a configuração necessária (pasta `assets` e arquivo `webpack.config.js`).
+    - **Ação:** Copie a pasta `assets`, o arquivo `webpack.config.js` e o `package.json` para a raiz do seu projeto.
+    - **Atenção:** Se você já possui uma pasta `assets` no seu projeto, **copie apenas o conteúdo da pasta `assets` deste projeto Webpack** para a sua pasta `assets`.
+
+6. **Instale as dependências do Webpack dentro do seu projeto original:**
+    - **Motivo:** As dependências listadas no `package.json` são necessárias para que o Webpack e suas funcionalidades funcionem corretamente.
+    - **Ação:** No diretório raiz do seu projeto (onde está o `package.json`), rode:
     ```bash
     npm install
     ```
 
-2. **Rodar o build para produção (minificação incluída):**
+7. **Rodar o build para produção (minificação incluída):**
+   - **Motivo:** Este comando processa e minifica seus arquivos JavaScript e SCSS, gerando versões otimizadas para uso em produção.
+   - **Ação:** Para gerar o build final, execute:
     ```bash
     npm run build
     ```
 
-3. **Rodar o watch para desenvolvimento (com ou sem minificação, pode ser configurado no arquivo `webpack.config.js`):**
+8. **Rodar o watch para desenvolvimento (com ou sem minificação, pode ser configurado no arquivo `webpack.config.js`):**
+   - **Motivo:** O comando `watch` monitora alterações nos arquivos e recompila automaticamente durante o desenvolvimento, economizando tempo.
+   - **Ação:** Para rodar o `watch`, execute:
     ```bash
     npm run watch
     ```
