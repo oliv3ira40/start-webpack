@@ -13,8 +13,14 @@ module.exports = (env, argv) => {
   
   return {
     entry: {
-      admin: ['./assets/admin/src/js/_main.js', './assets/admin/src/scss/_main.scss'],
-      public: ['./assets/public/src/js/_main.js', './assets/public/src/scss/_main.scss']
+      admin: [
+        './assets/admin/src/js/_main.js', // Arquivo de entrada do JS
+        './assets/admin/src/scss/_main.scss' // Arquivo de entrada do SCSS
+      ],
+      public: [
+        './assets/public/src/js/_main.js', // Arquivo de entrada do JS
+        './assets/public/src/scss/_main.scss' // Arquivo de entrada do SCSS
+      ]
     },
     output: {
       filename: '[name]/js/[name].min.js',
