@@ -45,6 +45,13 @@ module.exports = (env, argv) => {
             'css-loader',
             'sass-loader'
           ]
+        },
+        {
+          test: /\.(png|jpg|gif|svg)$/,
+          type: 'asset/resource',
+          generator: {
+            filename: 'images/[name].[contenthash][ext]'
+          }
         }
       ]
     },

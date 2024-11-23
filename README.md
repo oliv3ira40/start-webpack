@@ -17,6 +17,7 @@ Este projeto foi criado para ser integrado em qualquer projeto front-end, automa
 
 - Node.js (v12 ou superior)
 - NPM (ou Yarn)
+- Python (para instalação de dependências do node-gyp)
 
 ---
 
